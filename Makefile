@@ -95,7 +95,7 @@ bip-orchestrate-vm:
 	@if [ -d $@ ]; then \
 		git -C $@ pull ;\
 	else \
-		git clone https://github.com/rh-ecosystem-edge/bip-orchestrate-vm ;\
+		git clone https://github.com/mresvanis/bip-orchestrate-vm.git && cd $@ && git checkout adjust-target-vm-disk-performance;\
 	fi
 
 .PHONY: lifecycle-agent
